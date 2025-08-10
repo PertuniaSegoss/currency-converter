@@ -30,4 +30,4 @@ Technologies Used
 -Chart.js for rendering the history chart
 
 Demo
--Open 
+-Open https://pertuniasegoss.github.io/currency-converter/
