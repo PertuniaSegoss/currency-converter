@@ -6,13 +6,18 @@
 body {
   font-family: "Poppins", sans-serif;
   background: #f0f4f8;
-  margin: 40px auto;
-  max-width: 460px;
-  padding: 0 20px;
+  margin: 0;
+  padding: 0;
   color: #222;
   user-select: none;
   text-align: center;
+
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 
 h2 {
   font-weight: 700;
@@ -26,10 +31,16 @@ h2 {
   border-radius: 20px;
   box-shadow: 0 12px 30px rgba(255, 77, 136, 0.15);
   padding: 30px 25px;
-  position: relative;
-  display: inline-block;
-  min-width: 320px;
+
+  width: 100%;
+  max-width: 460px;
+  min-height: 100dvh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
 
 .bg-USD {
   background: linear-gradient(135deg, #1e90ff 0%, #00bfff 100%);
@@ -127,12 +138,19 @@ canvas {
 }
 
 @media (max-width: 480px) {
-  input[type="number"],
-  select {
-    width: 100%;
-    margin: 10px 0 20px 0;
+  #converter-card {
+    border-radius: 0;
+    box-shadow: none;
+    padding: 25px 20px;
   }
+
+  h2 {
+    margin-bottom: 20px;
+  }
+}
+
   button {
     width: 100%;
   }
 }
+
