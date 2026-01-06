@@ -1,3 +1,4 @@
+/* =============== GLOBAL =============== */
 * {
   box-sizing: border-box;
   transition: background-color 0.4s ease, color 0.4s ease;
@@ -10,22 +11,16 @@ body {
   padding: 0;
   color: #222;
   user-select: none;
-  text-align: center;
 
+  /* Full height & center content */
   min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
-
-h2 {
-  font-weight: 700;
-  margin-bottom: 25px;
-  color: #ff4d88;
-  text-shadow: 0 1px 5px rgba(255, 77, 136, 0.5);
-}
-
+/* =============== CARD =============== */
 #converter-card {
   background: white;
   border-radius: 20px;
@@ -34,27 +29,24 @@ h2 {
 
   width: 100%;
   max-width: 460px;
-  min-height: 100dvh;
 
+  /* full height for mobile */
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
-
-.bg-USD {
-  background: linear-gradient(135deg, #1e90ff 0%, #00bfff 100%);
-  color: white;
-}
-.bg-EUR {
-  background: linear-gradient(135deg, #ff6f91 0%, #ff9671 100%);
-  color: white;
-}
-.bg-GBP {
-  background: linear-gradient(135deg, #7b2ff7 0%, #f107a3 100%);
-  color: white;
+/* =============== HEADING =============== */
+h2 {
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #ff4d88;
+  text-shadow: 0 1px 5px rgba(255, 77, 136, 0.5);
 }
 
+/* =============== INPUTS & SELECTS =============== */
 input[type="number"],
 select {
   width: 120px;
@@ -78,6 +70,7 @@ select:focus {
   box-shadow: 0 0 15px #ff4d88;
 }
 
+/* =============== BUTTON =============== */
 button {
   background: #ff4d88;
   color: white;
@@ -99,7 +92,7 @@ button:hover {
   box-shadow: 0 8px 24px rgba(230, 54, 111, 0.7);
 }
 
-/* Result */
+/* =============== RESULT =============== */
 #result {
   margin-top: 30px;
   font-size: 1.4rem;
@@ -110,13 +103,14 @@ button:hover {
   text-shadow: 0 1px 3px rgba(255, 77, 136, 0.7);
 }
 
-/* Chart */
+/* =============== CHART =============== */
 canvas {
   margin-top: 40px;
   border-radius: 15px;
   box-shadow: 0 10px 35px rgba(255, 77, 136, 0.15);
 }
 
+/* =============== LOADING SPINNER =============== */
 #loadingSpinner {
   border: 4px solid #f3f3f3;
   border-top: 4px solid #ff4d88;
@@ -137,20 +131,21 @@ canvas {
   }
 }
 
+/* =============== MOBILE RESPONSIVE =============== */
 @media (max-width: 480px) {
   #converter-card {
     border-radius: 0;
-    box-shadow: none;
-    padding: 25px 20px;
+    padding: 20px;
+    min-height: 100dvh;
   }
 
-  h2 {
-    margin-bottom: 20px;
+  input[type="number"],
+  select {
+    width: 100%;
+    margin: 10px 0 20px 0;
   }
-}
 
   button {
     width: 100%;
   }
 }
-
